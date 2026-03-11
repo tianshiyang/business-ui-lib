@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import FinishDialog from '~/finishDialog/components/finishDialog.vue'
-
 const visible = ref(false)
 
 const handleSubmit = (payload: { username: string; password: string }) => {

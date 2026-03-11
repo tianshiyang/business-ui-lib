@@ -5,11 +5,11 @@
   "type": "module",
   "main": "./dist/business-ui-lib.es.js",
   "module": "./dist/business-ui-lib.es.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/business-ui-lib.es.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/src/index.d.ts"
     }
   },
   "scripts": {
