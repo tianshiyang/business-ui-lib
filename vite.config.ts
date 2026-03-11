@@ -22,6 +22,14 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
   ],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://tianshiyang.com',
+        changeOrigin: true,
+      },
+    },
+  },
   // 组件库打包配置
   build: {
     outDir: 'lib',

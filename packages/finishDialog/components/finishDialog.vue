@@ -20,6 +20,7 @@
 <script setup lang="ts">
 import { reactive, type PropType } from "vue";
 import type { FinishDialogSubmitPayload, FinishDialogType } from "../types/index"
+import { userLoginAPI } from '../../api'
 
 defineOptions({
   name: 'FinishDialog',
@@ -43,8 +44,13 @@ const formData = reactive<FinishDialogSubmitPayload>({
   password: ''
 })
 
-const handleSubmit = () => { 
+const handleSubmit = async () => { 
   modelValue.value = false
+  const res = await userLoginAPI({
+    username: formData.username,
+    password: formData.password
+  })
+  console.log(res)
   emit("submit", {
     username: formData.username,
     password: formData.password
