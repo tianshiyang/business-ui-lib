@@ -3,18 +3,21 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "main": "./dist/business-ui-lib.es.js",
-  "module": "./dist/business-ui-lib.es.js",
-  "types": "./dist/src/index.d.ts",
+  "main": "./lib/business-ui-lib.es.js",
+  "module": "./lib/business-ui-lib.es.js",
+  "types": "./lib/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/business-ui-lib.es.js",
-      "types": "./dist/src/index.d.ts"
+      "import": "./lib/business-ui-lib.es.js",
+      "types": "./lib/types/index.d.ts"
     }
   },
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build:lib": "vite build && vue-tsc -p tsconfig.lib.json",
     "preview": "vite preview"
   },
   "dependencies": {

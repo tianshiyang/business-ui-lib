@@ -9,14 +9,9 @@
       "~/*": ["packages/*"]
     },
 
-    /* 输出类型声明到 dist，给组件库使用方导入 */
-    // "noEmit": false,
-    // "composite": true,
     "declaration": true,
     "emitDeclarationOnly": true,
     "declarationDir": "./dist",
-    // "declarationMap": true,
-    // "stripInternal": true,
 
     /* Linting */
     "strict": true,

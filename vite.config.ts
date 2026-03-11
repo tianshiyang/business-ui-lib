@@ -24,8 +24,9 @@ export default defineConfig({
   ],
   // 组件库打包配置
   build: {
+    outDir: 'lib',
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: resolve(__dirname, 'packages/index.ts'),
       name: 'BusinessUiLib',
       fileName: (format) => `business-ui-lib.${format}.js`,
       formats: ['es'],
