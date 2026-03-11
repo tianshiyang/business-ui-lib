@@ -42,12 +42,6 @@ export default defineConfig({
     rollupOptions: {
       // 外部依赖，不打进库里，交给使用方项目提供
       external: ['vue', 'element-plus'],
-      output: {
-        globals: {
-          vue: 'Vue',
-          'element-plus': 'ElementPlus',
-        },
-      },
     },
   },
 })
