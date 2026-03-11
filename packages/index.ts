@@ -1,12 +1,14 @@
 import type { App } from 'vue'
 
 // 暂时导出现有示例组件，后续可以在这里持续新增业务组件
-import FinishDialog from './finishDialog/components/finishDialog.vue'
-export type { FinishDialogSubmitPayload, FinishDialogType } from './finishDialog/types'
+import FinishDialog from './components/finishDialog/components/finishDialog.vue'
+import MyTabs from './components/tabs/myTabs.vue'
+import TabItem from './components/tabs/tabItem.vue'
+export type { FinishDialogSubmitPayload, FinishDialogType } from './components/finishDialog/types'
 
-export { FinishDialog }
+export { FinishDialog, MyTabs, TabItem }
 
-const components = [FinishDialog]
+const components = [FinishDialog, MyTabs, TabItem]
 
 export default {
   install(app: App) {

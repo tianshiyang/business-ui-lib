@@ -20,7 +20,7 @@
 <script setup lang="ts">
 import { reactive, type PropType } from "vue";
 import type { FinishDialogSubmitPayload, FinishDialogType } from "../types/index"
-import { userLoginAPI } from '../../api'
+import { userLoginAPI } from '../../../api'
 
 defineOptions({
   name: 'FinishDialog',

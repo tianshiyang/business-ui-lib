@@ -9,10 +9,18 @@ const handleSubmit = (payload: { username: string; password: string }) => {
 const handleClose = () => {
   visible.value = false
 }
+
+const tabsModelValue = ref('first')
 </script>
 
 <template>
   <el-button @click="visible = true" >点击打开登录弹窗</el-button>
+
+  <MyTabs v-model="tabsModelValue">
+    <MyTabItem name="first">第一个</MyTabItem>
+    <MyTabItem name="second">第二个</MyTabItem>
+    <MyTabItem name="third">第三个</MyTabItem>
+  </MyTabs>
 
   <FinishDialog type="login" v-model="visible" @submit="handleSubmit" @close="handleClose" />
 </template>
