@@ -5,13 +5,12 @@
 </template>
 
 <script setup lang="ts">
+import { useChildren } from '~/utils/testUseRelation/useChildren';
+import { TAB_KEY } from '.';
 defineOptions({
   name: 'MyTabs',
 })  
 
 defineModel()
-
-import { useChildren } from '~/utils/testUseRelation/useChildren';
-import { TAB_KEY } from '.';
 useChildren(TAB_KEY)
 </script>
